@@ -584,6 +584,49 @@ img {
   font-weight: 700;
 }
 
+.ack-note {
+  margin: -8px 0 22px;
+  color: var(--muted);
+  font-size: 16px;
+  font-style: italic;
+}
+
+.orangecat-scroller {
+  margin: 0 0 26px;
+  overflow: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--orange) transparent;
+}
+
+.orangecat-track {
+  display: flex;
+  width: max-content;
+  gap: 16px;
+  animation: orangecat-scroll 24s linear infinite;
+}
+
+.orangecat-track img {
+  width: 160px;
+  height: 200px;
+  flex: 0 0 auto;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 10px 26px rgba(70, 43, 24, 0.12);
+}
+
+.orangecat-scroller:hover .orangecat-track {
+  animation-play-state: paused;
+}
+
+@keyframes orangecat-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 .logo-category {
   display: grid;
   grid-template-columns: 72px 1fr;

@@ -191,3 +191,8 @@ renderLogos();
 renderContact();
 setupNavigation();
 document.getElementById("year").textContent = new Date().getFullYear();
+
+const orangeTrack = document.querySelector(".orangecat-track");
+if (orangeTrack) {
+  orangeTrack.innerHTML += orangeTrack.innerHTML;
+}
