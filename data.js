@@ -105,14 +105,16 @@ window.SITE_DATA = {
       title: "Nanyang Technological University",
       detail: "Joint Ph.D. Candidate",
       kind: "edu",
-      logo: "/images/logo/NTU.png"
+      logo: "/images/logo/NTU.png",
+      logoClass: "timeline-logo--large"
     },
     {
       period: "2024 — 2028",
       title: "University of Electronic Science and Technology of China",
       detail: "Ph.D. Candidate",
       kind: "edu",
-      logo: "/images/logo/UESTC.png"
+      logo: "/images/logo/UESTC.png",
+      logoClass: "timeline-logo--small"
     },
     {
       period: "2022 — 2024",

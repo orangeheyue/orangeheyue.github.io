@@ -86,7 +86,7 @@ function renderTimeline() {
         <div class="timeline-item timeline-${esc(item.kind)}">
           <div class="timeline-node"></div>
           <div class="timeline-card">
-            <img class="timeline-logo" src="${esc(item.logo)}" alt="${esc(item.title)}" loading="lazy" />
+            <img class="timeline-logo ${esc(item.logoClass || "")}" src="${esc(item.logo)}" alt="${esc(item.title)}" loading="lazy" />
             <div>
               <span class="timeline-period">${esc(item.period)}</span>
               <h3>${esc(item.title)}</h3>
@@ -103,7 +103,7 @@ function renderLogos() {
   const university = data.acknowledgements.universities
     .map(
       (item) => `
-        <figure class="logo-item">
+        <figure class="logo-item ${esc(item.itemClass || "")}">
           <img src="${esc(item.logo)}" alt="${esc(item.name)}" loading="lazy" />
           <figcaption>${esc(item.name)}</figcaption>
         </figure>
@@ -114,7 +114,7 @@ function renderLogos() {
   const industry = data.acknowledgements.industry
     .map(
       (item) => `
-        <figure class="logo-item">
+        <figure class="logo-item ${esc(item.itemClass || "")}">
           <img src="${esc(item.logo)}" alt="${esc(item.name)}" loading="lazy" />
           <figcaption>${esc(item.name)}</figcaption>
         </figure>

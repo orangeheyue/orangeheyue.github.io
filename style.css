@@ -518,7 +518,8 @@ img {
 }
 
 .timeline-card {
-  display: flex;
+  display: grid;
+  grid-template-columns: 140px 1fr;
   align-items: center;
   gap: 18px;
   padding: 18px 20px;
@@ -529,10 +530,21 @@ img {
 }
 
 .timeline-logo {
-  width: 76px;
-  height: 76px;
+  width: 100px;
+  height: 100px;
   flex: none;
   object-fit: contain;
+  justify-self: center;
+}
+
+.timeline-logo--large {
+  width: 140px;
+  height: 140px;
+}
+
+.timeline-logo--small {
+  width: 80px;
+  height: 80px;
 }
 
 .timeline-period {
@@ -597,6 +609,13 @@ img {
   gap: 28px;
 }
 
+#university-logos,
+#industry-logos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
 .logo-item {
   display: flex;
   flex-direction: column;
@@ -606,8 +625,8 @@ img {
 }
 
 .logo-item img {
-  width: 64px;
-  height: 64px;
+  width: 150px;
+  height: 150px;
   object-fit: contain;
   padding: 6px;
   border: 1px solid var(--line);
@@ -823,7 +842,7 @@ img {
   }
 
   .timeline-card {
+    grid-template-columns: 1fr;
     align-items: flex-start;
-    flex-direction: column;
   }
 }
